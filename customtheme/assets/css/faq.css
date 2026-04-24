@@ -1,0 +1,137 @@
+.faq-section {
+	padding-bottom: 180px;
+}
+
+.faq-grid-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.faq-grid-list li {
+	padding: 24px;
+	color: #ffffff;
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	margin-bottom: -1px;
+}
+.faq-question {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.faq-grid-list li h3 {
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-family: 'Tactic-Med', sans-serif;
+	line-height: 100%;
+}
+
+.faq-grid-list li p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 120%;
+	font-family: 'Tektur-Regular', sans-serif;
+	transition: all 0.3s ease;
+}
+
+/* FAQ Toggle Button */
+.faq-toggle {
+	position: relative;
+	flex-shrink: 0;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+
+.faq-toggle span {
+	position: absolute;
+	background: #fff;
+	transition: all 0.3s ease;
+}
+
+.faq-toggle span:first-child {
+	width: 24px;
+	height: 2px;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+
+.faq-toggle span:last-child {
+	width: 2px;
+	height: 24px;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%) rotate(0deg)
+}
+
+.faq-expanded .faq-toggle span:last-child {
+	opacity: 0;
+	height: 0;
+	transform: rotate(90deg) translateX(-50%);
+}
+
+/* Mobile toggle styles */
+@media (max-width: 767px) {
+	.faq-grid-list li.faq-expanded h3 {
+		margin-bottom: 24px;
+	}
+	.faq-grid-list {
+		grid-template-columns: 1fr;
+	}
+	
+	.faq-grid-list li {
+		border-right: none;
+	}
+	
+	.faq-grid-list li h3 {
+		cursor: pointer;
+		position: relative;
+		padding-right: 40px;
+	}
+	
+	.faq-toggle {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	.faq-toggle {
+		display: none;
+	}
+	
+	.faq-grid-list {
+		grid-template-columns: repeat(2, 1fr); 
+	}
+	.faq-grid-list li {
+		padding: 40px;
+	}
+	.faq-grid-list li h3 {
+		cursor: default;
+		margin-bottom: 24px;
+	}
+	
+	.faq-grid-list li:nth-child(2n) {
+		border-right: none;
+	}
+}
+
+@media (min-width: 1024px) {
+	.faq-grid-list {
+		grid-template-columns: repeat(3, 1fr); 
+	}
+	
+	.faq-grid-list li:nth-child(2n) {
+		border-right: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	
+	.faq-grid-list li:nth-child(3n) {
+		border-right: none;
+	}
+}

@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "TacticBld";
+  src: url("../fonts/TacticSans-Bld.otf") format("opentype");
+}
+@font-face {
+  font-family: "TacticBlk";
+  src: url("../fonts/TacticSans-Blk.otf") format("opentype");
+}
+@font-face {
+  font-family: "TacticExd-Blk";
+  src: url("../fonts/TacticSansExd-Blk.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Tactic-Med";
+  src: url("../fonts/TacticSans-Med.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Tektur-Black";
+  src: url("../fonts/Tektur-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tektur-Bold";
+  src: url("../fonts/Tektur-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tektur-ExtraBold";
+  src: url("../fonts/Tektur-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tektur-Medium";
+  src: url("../fonts/Tektur-Medium.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Tektur-Regular";
+	src: url("../fonts/Tektur-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tektur-SemiBold";
+  src: url("../fonts/Tektur-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TTFirs";
+  src: url("../fonts/TTFirsNeue-DemiBold.ttf") format("truetype");
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+section {
+	background: #000;
+}
+
+.title {
+	padding: 24px;
+	color: #fff;
+	font-family: 'TacticBld', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 28px;
+	line-height: 20px;
+}
+
+.main-btn {
+	font-family: 'TTFirs', sans-serif;
+	color: #000;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-btn:hover {
+	background: #DD3030; 
+	color: #000;
+	text-decoration: none;
+}
+
+.button-menu {
+	display: flex;
+	width: 48px;
+	height: 48px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #DD3030;
+	gap: 8px;
+	border-radius: 0px;
+	padding: 8px;
+}
+
+.button-menu:hover {
+	background: #DD3030;
+}
+
+.button-menu[aria-expanded="true"] {
+	background: #DD3030;
+}
+
+.button-menu span {
+	width: 100%;
+	height: 4px;
+	background: #fff;
+	display: inline-flex;
+	transition: all 0.3s ease;
+}
+
+.button-menu span:nth-child(2) {
+	width: 16px;
+}
+
+.main-navigation.toggled .button-menu span:nth-child(1) {
+	transform: translateY(12px) rotate(45deg);
+}
+
+.main-navigation.toggled .button-menu span:nth-child(2) {
+	opacity: 0;
+	width: 0;
+}
+
+.main-navigation.toggled .button-menu span:nth-child(3) {
+	transform: translateY(-12px) rotate(-45deg);
+}
+
+.button-secondary {
+	font-family: 'TTFirs', sans-serif;
+	color: #fff;
+	font-weight: 700;
+	transition: all 0.3s ease;
+	background: transparent;
+	border-radius: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 11px;
+}
+.button-secondary:hover {
+	background: #DD3030; 
+	color: #000;
+	text-decoration: none;
+}
+
+.button-secondary.isActive {
+	background: var(--background-color);
+	color: #000;
+}
+
+@media (min-width: 640px) {
+	.title {
+		padding: 30px 40px;
+	}
+}
+@media (min-width: 1024px) {
+	.button-menu {
+		display: none;
+	}
+}
+@media (min-width: 1200px) {
+	.title {
+		font-size: 36px;
+	}
+}
